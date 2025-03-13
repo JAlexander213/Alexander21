@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Prueba.css">
+</head>
+<body class="pagina1">
+    <script>
+     var nombre;
+while (!nombre || nombre.length < 3 || !isNaN(nombre)) { /*IsNaN es una funcion si es numero */
+    nombre = prompt("Ingresa tu nombre:");
+    if (!nombre || nombre.length < 3 || !isNaN(nombre)) { /*Length Cadena que devuelve cantidad de caracteres */
+        alert("Por favor, ingresa un nombre válido (al menos 3 caracteres)");
+    }
+}
+alert("Bienvenido " + nombre);
+document.getElementById("btnEjemplo").addEventListener("click", function() {
+    this.value = "¡Redirigiendo!"; 
+});
+    </script>
+    <img class="ImagenLogo" src="logoEco.jpg" alt="Logo Ecología">
+    <input type="button" value="Ingresar" onclick="window.location.href='Prueba.html';" id="btnIngresar"> 
+</body>
+</html>
