@@ -1,76 +1,45 @@
-/* Estilos Generales */
-* {
+/* Estilo general para la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.pagina1, .pagina2, .pagina3, .pagEco, .pagSalud, .pagEI {
-    height: 100vh;
-    margin: 0;
-}
-
-.pagina1 {
-    background-color: black !important;
-}
-
-.pagina2 {
-    background: linear-gradient(to right, #000000, #8c12f0, rgb(248, 134, 40));
-}
-
-.pagina3 {
-    background: linear-gradient(to right, #000000, rgb(173, 6, 214), #f712e4);
-}
-
-.pagEco {
-    background: linear-gradient(to right, #000000, rgb(48, 60, 226), #416bf5);
-}
-
-.pagSalud {
-    background: linear-gradient(to right, #000000, rgb(230, 39, 39), #f17d30);
-}
-
-.pagEI {
-    background: linear-gradient(to right, #000000, rgb(19, 252, 89), #42e686);
-}
-
-/* Imagen de fondo */
-.ImagenLogo {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vwh;
-    min-height: 100vwh;
-    top: 0;
-    left: 0;
-    z-index: -1;
+/* Estilo para los botones */
+#btnRegresar {
+    position: absolute;
+    bottom: 20px; /* Ajusta la separación al final del texto */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #ff12a4;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
     opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
+    animation: fadeInText 1s ease-in-out forwards;
 }
 
-.ImagenLogo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#btnRegresar:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0bfff3, 0 0 30px #00ffff;
 }
 
-/* Logos */
-.logoEco, .MarinoEco {
-    width: 100vh;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10%;
-    background-color: transparent;
-    transform: scale(1.2);
-    opacity: 0;
-    animation: zoomIn 1.2s ease-out forwards;
+#btnRegresar:active {
+    background-color: #ffffff;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px #00408a, 0 0 15px #00408a;
 }
 
-/* Botones */
-#btnIngresar, #btnEjemplo, #btnEjemplo2, #btnSalud, #btnEI, #btnEco {
+/* Botones de las otras páginas */
+#btnEco, #btnSalud, #btnEI, #btnEjemplo2 {
     position: absolute;
     padding: 10px 20px;
     width: 200px;
@@ -83,257 +52,88 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-#btnIngresar {
-    left: 45%;
-    top: 900px;
-    background-color: #ff12a4;
-    color: white;
-    animation: neon-glow-btn 1.5s infinite alternate;
-}
-
-#btnIngresar:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #0bfff3, 0 0 30px #00ffff;
-}
-
-#btnIngresar:active {
-    background-color: #ffffff;
-    transform: scale(0.95);
-    box-shadow: 0 0 5px #00408a, 0 0 15px #00408a;
-}
-
-#btnEjemplo {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #ffee00;
-    color: white;
-}
-
-#btnEjemplo:hover {
-    background-color: #f5980d;
-    transform: scale(1.1);
-}
-
-#btnEjemplo:active {
-    background-color: #430650;
-    transform: scale(0.95);
-}
-
-#btnEjemplo2 {
-    left: 45%;
-    background-color: #7009c5;
-    color: white;
-    top: 500px;
-}
-
-#btnEjemplo2:hover {
-    background-color: #f11c80;
-    transform: scale(1.1);
-}
-
-#btnEjemplo2:active {
-    background-color: #00408a;
-    transform: scale(0.95);
-}
-
-#btnSalud {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #f71c1c;
-    color: white;
-}
-
-#btnSalud:hover {
-    background-color: #fffb00;
-    transform: scale(1.1);
-}
-
-#btnSalud:active {
-    background-color: #000000;
-    transform: scale(0.95);
-}
-
-#btnEI {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #14f326;
-    color: white;
-}
-
-#btnEI:hover {
-    background-color: #1a754f;
-    transform: scale(1.1);
-}
-
-#btnEI:active {
-    background-color: #000000;
-    transform: scale(0.95);
-}
-
-#btnEco {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #17ffcd;
-    color: white;
-}
-
-#btnEco:hover {
-    background-color: #ff00ea;
-    transform: scale(1.1);
-}
-
-#btnEco:active {
-    background-color: #00408a;
-    transform: scale(0.95);
-}
-
-/* Texto */
-p, .Texto, ul, .TextoEco {
-    color: rgb(255, 255, 255);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: large;
     opacity: 0;
     animation: fadeInText 1.3s ease-in-out forwards;
 }
 
-.Texto, .TextoEco, .parrafoEjemplo {
+#btnEco {
+    bottom: 20px; /* Se coloca al final */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #17ffcd;
+    color: white;
+}
+
+#btnSalud {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f71c1c;
+    color: white;
+}
+
+#btnEI {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #14f326;
+    color: white;
+}
+
+#btnEjemplo2 {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7009c5;
+    color: white;
+}
+
+/* El botón Acerca de Nosotros (no cambia la posición) */
+#btnEjemplo {
+    padding: 10px 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #ffee00;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInText 1.3s ease-in-out forwards;
+}
+
+/* Imagen del Cambio Climático */
+.logoEco {
+    width: 100%;
+    max-width: 1000px; /* Ajusta el ancho de la imagen al ancho de los párrafos */
+    height: auto;
+    margin: 20px auto; /* Añade espacio alrededor de la imagen */
+    display: block;
+    object-fit: contain; /* Hace que la imagen no se distorsione */
+}
+
+/* Estilos generales para los párrafos */
+.parrafoEjemplo {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    padding: 20px;
-    max-width: 1000px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
     color: white;
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.Bienvenida, .BienEco, .BienSalud, .BienEI {
-    color: azure;
-    position: absolute;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    z-index: 2;
-    transform: scale(1.2);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    animation: zoomIn 1.2s ease-out forwards;
-}
-
-.Bienvenida {
-    left: 28%;
-    top: 400px;
-}
-
-.BienEco {
-    left: 28%;
-    top: 400px;
-}
-
-.BienSalud {
-    left: 32%;
-    top: 400px;
-}
-
-.BienEI {
-    left: 32%;
-    top: 400px;
-}
-
-.enlaces {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.pg1, .pg2, .pg3 {
-    font-size: 1.2rem;
-    color: white;
-    position: relative;
-    cursor: pointer;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
-}
-
-.pg1::after, .pg2::after, .pg3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.pg1:hover::after, .pg2:hover::after, .pg3:hover::after {
-    transform: scaleX(1);
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(1.2);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
+/* Animación para los botones y elementos */
 @keyframes fadeInText {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
     }
-}
-
-@keyframes neon-glow-btn {
-    0% { box-shadow: 0 0 5px #ff12a4; }
-    50% { box-shadow: 0 0 15px #ff12a4, 0 0 30px #ff12a4; }
-    100% { box-shadow: 0 0 5px #ff12a4; }
-}
-
-@keyframes entrada {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Estilos de la imagen de Instagram */
-.fotoInstagram {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
 }
