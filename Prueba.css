@@ -1,139 +1,125 @@
-/* Estilo general para la página */
+/* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Clase para los párrafos de las secciones */
+.parrafoEjemplo {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para la imagen con la clase logoEco */
+.logoEco {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
 }
 
 /* Estilo para los botones */
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Botón específico "Acerca de Nosotros" */
+#btnEjemplo {
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Modificación para los otros botones (excepto Acerca de Nosotros) */
+button:not(#btnEjemplo) {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón "Regresar" */
 #btnRegresar {
     position: absolute;
-    bottom: 20px; /* Ajusta la separación al final del texto */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    width: 200px;
-    height: 50px;
-    background-color: #ff12a4;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    animation: fadeInText 1s ease-in-out forwards;
-}
-
-#btnRegresar:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #0bfff3, 0 0 30px #00ffff;
-}
-
-#btnRegresar:active {
-    background-color: #ffffff;
-    transform: scale(0.95);
-    box-shadow: 0 0 5px #00408a, 0 0 15px #00408a;
-}
-
-/* Botones de las otras páginas */
-#btnEco, #btnSalud, #btnEI, #btnEjemplo2 {
-    position: absolute;
-    padding: 10px 20px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    animation: fadeInText 1.3s ease-in-out forwards;
-}
-
-#btnEco {
-    bottom: 20px; /* Se coloca al final */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #17ffcd;
-    color: white;
-}
-
-#btnSalud {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f71c1c;
-    color: white;
+    margin-bottom: 20px;
 }
 
-#btnEI {
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #14f326;
-    color: white;
-}
-
-#btnEjemplo2 {
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #7009c5;
-    color: white;
-}
-
-/* El botón Acerca de Nosotros (no cambia la posición) */
+/* Estilo para el botón de "Acerca de Nosotros" para que no se mueva */
 #btnEjemplo {
-    padding: 10px 20px;
-    width: 200px;
-    height: 50px;
-    background-color: #ffee00;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    animation: fadeInText 1.3s ease-in-out forwards;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Imagen del Cambio Climático */
+/* Separación entre los botones y el contenido */
+button:not(#btnEjemplo) {
+    margin-bottom: 20px;
+}
+
+/* Ajuste de la imagen para que se vea bien */
 .logoEco {
     width: 100%;
-    max-width: 1000px; /* Ajusta el ancho de la imagen al ancho de los párrafos */
+    max-width: 800px; /* Ajusta el tamaño máximo según lo necesites */
     height: auto;
-    margin: 20px auto; /* Añade espacio alrededor de la imagen */
-    display: block;
-    object-fit: contain; /* Hace que la imagen no se distorsione */
-}
-
-/* Estilos generales para los párrafos */
-.parrafoEjemplo {
-    max-width: 1000px;
     margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: left;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: block;
 }
 
-/* Animación para los botones y elementos */
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
+/* Estilos específicos para los botones según el tipo */
+#btnEco, #btnSalud, #btnEI, #btnEjemplo2 {
+    background-color: #28a745; /* Verde para los botones secundarios */
+}
+
+#btnRegresar {
+    background-color: #f44336; /* Rojo para el botón "Regresar" */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Medidas de pantalla pequeña (como móviles) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
     }
-    100% {
-        opacity: 1;
+
+    .parrafoEjemplo {
+        padding: 10px;
+    }
+
+    .logoEco {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1.1em;
     }
 }
