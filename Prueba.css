@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .pagina1, .pagina2, .pagina3, .pagEco, .pagSalud, .pagEI {
     height: 100vh;
     margin: 0;
 }
+
 .pagina1 {
     background-color: black !important;
 }
@@ -16,16 +18,19 @@
 }
 
 .pagina3 {
-    background: linear-gradient(to right, #000000, rgb(173, 6, 214), #f712e4); 
+    background: linear-gradient(to right, #000000, rgb(173, 6, 214), #f712e4);
 }
-.pagEco{
-    background: linear-gradient(to right, #000000, rgb(48, 60, 226), #416bf5); 
+
+.pagEco {
+    background: linear-gradient(to right, #000000, rgb(48, 60, 226), #416bf5);
 }
-.pagSalud{
-    background: linear-gradient(to right, #000000, rgb(230, 39, 39), #f17d30); 
+
+.pagSalud {
+    background: linear-gradient(to right, #000000, rgb(230, 39, 39), #f17d30);
 }
-.pagEI{
-    background: linear-gradient(to right, #000000, rgb(19, 252, 89), #42e686); 
+
+.pagEI {
+    background: linear-gradient(to right, #000000, rgb(19, 252, 89), #42e686);
 }
 
 .ImagenLogo {
@@ -106,7 +111,6 @@
     100% { box-shadow: 0 0 5px #24c3eb; }
 }
 
-
 #btnEjemplo {
     left: auto;
     top: 10px;
@@ -162,6 +166,7 @@ p, .Texto {
     line-height: 1.6;
     text-align: left;
 }
+
 .parrafoEjemplo {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
@@ -183,6 +188,7 @@ p, .Texto {
     text-align: center;
     padding: 20px;
 }
+
 a {
     text-decoration: none; /* Eliminar el subrayado */
 }
@@ -251,16 +257,6 @@ a {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 .Bienvenida {
     color: azure;
     position: absolute;
@@ -276,6 +272,7 @@ a {
     opacity: 0;
     animation: zoomIn 1.2s ease-out forwards;
 }
+
 .BienEco {
     color: azure;
     position: absolute;
@@ -291,14 +288,16 @@ a {
     opacity: 0;
     animation: zoomIn 1.2s ease-out forwards;
 }
-ul, .TextoEco{
+
+ul, .TextoEco {
     color: rgb(255, 255, 255);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
     opacity: 0;
     animation: fadeInText 1.3s ease-in-out forwards;
 }
-ul, .TextoEco{
+
+ul, .TextoEco {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 20px;
@@ -310,6 +309,7 @@ ul, .TextoEco{
     line-height: 1.6;
     text-align: left;
 }
+
 #btnEco {
     left: auto;
     top: 10px;
@@ -339,7 +339,8 @@ ul, .TextoEco{
     background-color: #00408a;
     transform: scale(0.95);
 }
-.MarinoEco{
+
+.MarinoEco {
     width: 100vh;
     height: 50vh;
     display: flex;
@@ -352,6 +353,7 @@ ul, .TextoEco{
     opacity: 0;
     animation: zoomIn 1.2s ease-out forwards;
 }
+
 .fotoInstagram {
     position: fixed; /* Lo fija en la parte superior izquierda */
     top: 20px;
@@ -371,298 +373,14 @@ ul, .TextoEco{
     object-fit: cover;
     background-color: #12ffdf;
     color: white;
-    animation: neon-glow-btn 1.5s infinite alternate; /* Hace que la imagen se ajuste al recuadro sin distorsión */
+    animation: neon-glow-btn 1.5s infinite alternate; /* Hace que la imagen se ajuste al recuadro */
 }
 
-/* Efectos dinámicos */
 .fotoInstagram:hover {
-    transform: scale(1.1); /* Efecto de ampliación */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
-}
-
-/* Animación en la carga de la página */
-@keyframes entrada {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fotoInstagram {
-    animation: entrada 1s ease-out;
-}
-
-.fotoInstagram {
-    background-color: #ff12a4;
-    animation: neon-glow-btn 1.5s infinite alternate;
-}
-
-/* Hover (cuando el mouse pasa por encima) */
-.fotoInstagram:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #f11c80, 0 0 30px #f11c80;
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más grande */
 }
 
 .fotoInstagram:active {
-    background-color: #ffffff;
-    transform: scale(0.95);
-    box-shadow: 0 0 5px #ff12a4, 0 0 15px #ff12a4;
-}
-
-@keyframes neon-glow-btn {
-    0% { box-shadow: 0 0 5px #ff12a4; }
-    50% { box-shadow: 0 0 15px #ff12a4, 0 0 30px #ff12a4; }
-    100% { box-shadow: 0 0 5px #ff12a4; }
-}
-.redes{
-    position: absolute;
-    top: 40px;
-    left: 95px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-}
-.parrafoEjemplo{
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 1000px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: left;
-}
-.BienSalud{
-        color: azure;
-        position: absolute;
-        text-align: center;
-        top: 400px;
-        left: 32%;
-        font-size: 4rem;
-        font-weight: bold;
-        z-index: 2;
-        transform: scale(1.2);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin: -150px 0 20px;
-        opacity: 0;
-        animation: zoomIn 1.2s ease-out forwards;
-}
-#btnSalud {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #f71c1c;
-    color: white;
-}
-
-#btnSalud:hover {
-    background-color: #fffb00;
-    transform: scale(1.1);
-}
-
-#btnSalud:active {
-    background-color: #000000;
-    transform: scale(0.95);
-}
-
-.BienEI{
-    color: azure;
-    position: absolute;
-    text-align: center;
-    top: 400px;
-    left: 32%;
-    font-size: 4rem;
-    font-weight: bold;
-    z-index: 2;
-    transform: scale(1.2);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: -150px 0 20px;
-    opacity: 0;
-    animation: zoomIn 1.2s ease-out forwards;
-}
-#btnEI {
-left: auto;
-top: 10px;
-right: 10px;
-background-color: #14f326;
-color: white;
-}
-
-#btnEI:hover {
-background-color: #1a754f;
-transform: scale(1.1);
-}
-
-#btnEI:active {
-background-color: #000000;
-transform: scale(0.95);
-}
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Tamaño de letra adecuado para móviles */
-        padding: 10px;
-        text-align: center; /* Centrar contenido */
-    }
-
-    .Bienvenida, .BienEco, .BienSalud, .BienEI {
-        font-size: 2rem; /* Reducir tamaño de los títulos */
-        left: 10%; /* Centrar mejor */
-        top: 200px; /* Ajustar para evitar desbordes */
-    }
-
-    /* Ajustar imágenes */
-    .ImagenLogo, .logoEco, .MarinoEco {
-        width: 90%;
-        height: auto;
-        max-width: 300px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    /* Botones más accesibles */
-    #btnIngresar, #btnEjemplo, #btnEjemplo2, #btnSalud, #btnEI {
-        width: 80%; /* Hacer que ocupen más espacio en móviles */
-        font-size: 14px;
-        left: 10%;
-        position: relative;
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* Contenedores */
-    .resolucion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desktop, .tablet, .movil {
-        display: none; /* Ocultar las secciones que no correspondan */
-    }
-
-    .movil {
-        display: block; /* Mostrar solo la versión móvil */
-    }
-
-    /* Ajustar párrafos y contenido */
-    .Texto, .TextoEco, .parrafoEjemplo {
-        width: 95%;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    /* Iconos de redes */
-    .fotoInstagram {
-        width: 40px;
-        height: 40px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .redes {
-        font-size: 12px;
-        left: 55px;
-        top: 15px;
-    }
-}
- .Imagen{
-           width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-        background-image: url('logoEco.jpg'); /* Cambia por tu imagen */
-        background-size: cover; /* Ajusta la imagen para cubrir el área */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
- }
-/* Estilo general para imágenes */
-.ImagenLogo, .logoEco, .MarinoEco {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* Tamaño máximo de la imagen */
-    display: block;
-    margin: 0 auto;
-}
-
-/* Ajustes de imagen para dispositivos móviles */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .Bienvenida, .BienEco, .BienSalud, .BienEI {
-        font-size: 2rem;
-        left: 10%;
-        top: 200px;
-    }
-
-    /* Ajustar imágenes */
-    .ImagenLogo, .logoEco, .MarinoEco {
-        width: 90%;
-        height: auto;
-        max-width: 250px; /* Reducir el tamaño máximo para que no ocupen tanto espacio */
-        display: block;
-        margin: 0 auto;
-    }
-
-    /* Botones más accesibles */
-    #btnIngresar, #btnEjemplo, #btnEjemplo2, #btnSalud, #btnEI {
-        width: 80%; /* Hacer que ocupen más espacio en móviles */
-        font-size: 14px;
-        left: 10%;
-        position: relative;
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* Contenedores */
-    .resolucion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desktop, .tablet, .movil {
-        display: none;
-    }
-
-    .movil {
-        display: block; /* Solo se muestra la versión móvil */
-    }
-
-    /* Ajustar párrafos y contenido */
-    .Texto, .TextoEco, .parrafoEjemplo {
-        width: 95%;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    /* Iconos de redes */
-    .fotoInstagram {
-        width: 40px;
-        height: 40px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .redes {
-        font-size: 12px;
-        left: 55px;
-        top: 15px;
-    }
-}
-
-/* Para la imagen de fondo */
-.Imagen {
-    width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-    background-image: url('logoEco.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    transform: scale(0.9); /* Reduce el tamaño cuando se hace clic */
 }
