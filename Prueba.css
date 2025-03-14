@@ -506,33 +506,49 @@ transform: scale(1.1);
 background-color: #000000;
 transform: scale(0.95);
 }
-.resolucion{
-    width: 99%;
+.resolucion {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    align-items: center;
+    text-align: center;
 }
-/**Movil**/
-@media (max-width: 767px){
-    .desktop{
+
+/** Movil **/
+@media (max-width: 767px) {
+    .desktop {
         display: none;
     }
-    .tablet{
+    .tablet {
         display: none;
     }
-}
-/**Tablet**/
-@media (min-width: 768px) and (max-width: 990px){
-     .desktop{
-        display: none;
-    }
-    .movil{
-        display: none;
+    .movil {
+        display: block; /* Asegurar que se muestre en móvil */
     }
 }
-/**Escritorio**/
-@media (min-width: 991px){
-    .tablet{
+
+/** Tablet **/
+@media (min-width: 768px) and (max-width: 990px) {
+    .desktop {
         display: none;
     }
-    .movil{
+    .movil {
         display: none;
+    }
+    .tablet {
+        display: block; /* Asegurar que se muestre en tablet */
+    }
+}
+
+/** Escritorio **/
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+    .desktop {
+        display: block; /* Asegurar que se muestre en escritorio */
     }
 }
