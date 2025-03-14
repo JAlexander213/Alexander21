@@ -114,7 +114,6 @@
     100% { box-shadow: 0 0 5px #24c3eb; }
 }
 
-
 #btnEjemplo {
     left: auto;
     top: 10px;
@@ -347,6 +346,7 @@ ul, .TextoEco{
     background-color: #00408a;
     transform: scale(0.95);
 }
+
 .MarinoEco{
     width: 100vh;
     height: 50vh;
@@ -367,220 +367,12 @@ ul, .TextoEco{
     width: 60px; /* Tamaño pequeño */
     height: 60px; /* Tamaño pequeño */
     overflow: hidden;
-    border-radius: 20%; /* Hacemos el borde redondeado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%; /* Hace que sea un círculo */
+    border: 2px solid white; /* Añade un borde blanco */
 }
 
-/* Estilos para la imagen dentro del recuadro */
-.fotoRedes {
+.fotoInstagram img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    background-color: #12ffdf;
-    color: white;
-    animation: neon-glow-btn 1.5s infinite alternate; /* Hace que la imagen se ajuste al recuadro sin distorsión */
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
 }
-
-/* Efectos dinámicos */
-.fotoInstagram:hover {
-    transform: scale(1.1); /* Efecto de ampliación */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
-}
-
-/* Animación en la carga de la página */
-@keyframes entrada {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fotoInstagram {
-    animation: entrada 1s ease-out;
-}
-
-.fotoInstagram {
-    background-color: #ff12a4;
-    animation: neon-glow-btn 1.5s infinite alternate;
-}
-
-/* Hover (cuando el mouse pasa por encima) */
-.fotoInstagram:hover {
-    background-color: #000000;
-    transform: scale(1.1);
-    box-shadow: 0 0 25px #f11c80, 0 0 30px #f11c80;
-}
-
-.fotoInstagram:active {
-    background-color: #ffffff;
-    transform: scale(0.95);
-    box-shadow: 0 0 5px #ff12a4, 0 0 15px #ff12a4;
-}
-
-@keyframes neon-glow-btn {
-    0% { box-shadow: 0 0 5px #ff12a4; }
-    50% { box-shadow: 0 0 15px #ff12a4, 0 0 30px #ff12a4; }
-    100% { box-shadow: 0 0 5px #ff12a4; }
-}
-.redes{
-    position: absolute;
-    top: 40px;
-    left: 95px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-}
-.parrafoEjemplo{
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 1000px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    color: white;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-align: left;
-}
-.BienSalud{
-        color: azure;
-        position: absolute;
-        text-align: center;
-        top: 400px;
-        left: 32%;
-        font-size: 4rem;
-        font-weight: bold;
-        z-index: 2;
-        transform: scale(1.2);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin: -150px 0 20px;
-        opacity: 0;
-        animation: zoomIn 1.2s ease-out forwards;
-}
-#btnSalud {
-    left: auto;
-    top: 10px;
-    right: 10px;
-    background-color: #f71c1c;
-    color: white;
-}
-
-#btnSalud:hover {
-    background-color: #fffb00;
-    transform: scale(1.1);
-}
-
-#btnSalud:active {
-    background-color: #000000;
-    transform: scale(0.95);
-}
-
-.BienEI{
-    color: azure;
-    position: absolute;
-    text-align: center;
-    top: 400px;
-    left: 32%;
-    font-size: 4rem;
-    font-weight: bold;
-    z-index: 2;
-    transform: scale(1.2);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin: -150px 0 20px;
-    opacity: 0;
-    animation: zoomIn 1.2s ease-out forwards;
-}
-#btnEI {
-left: auto;
-top: 10px;
-right: 10px;
-background-color: #14f326;
-color: white;
-}
-
-#btnEI:hover {
-background-color: #1a754f;
-transform: scale(1.1);
-}
-
-#btnEI:active {
-background-color: #000000;
-transform: scale(0.95);
-}
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Tamaño de letra adecuado para móviles */
-        padding: 10px;
-        text-align: center; /* Centrar contenido */
-    }
-
-    .Bienvenida, .BienEco, .BienSalud, .BienEI {
-        font-size: 2rem; /* Reducir tamaño de los títulos */
-        left: 10%; /* Centrar mejor */
-        top: 200px; /* Ajustar para evitar desbordes */
-    }
-
-    /* Ajustar imágenes */
-    .ImagenLogo, .logoEco, .MarinoEco {
-        width: 90%;
-        height: auto;
-        max-width: 300px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    /* Botones más accesibles */
-    #btnIngresar, #btnEjemplo, #btnEjemplo2, #btnSalud, #btnEI {
-        width: 80%; /* Hacer que ocupen más espacio en móviles */
-        font-size: 14px;
-        left: 10%;
-        position: relative;
-        margin: 10px auto;
-        display: block;
-    }
-
-    /* Contenedores */
-    .resolucion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desktop, .tablet, .movil {
-        display: none; /* Ocultar las secciones que no correspondan */
-    }
-
-    .movil {
-        display: block; /* Mostrar solo la versión móvil */
-    }
-
-    /* Ajustar párrafos y contenido */
-    .Texto, .TextoEco, .parrafoEjemplo {
-        width: 95%;
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    /* Iconos de redes */
-    .fotoInstagram {
-        width: 40px;
-        height: 40px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .redes {
-        font-size: 12px;
-        left: 55px;
-        top: 15px;
-    }
-}
- .Imagen{
-           width: 100%;
-    height: auto;
-    max-height: 100vh;
-    object-fit: cover;
-        background-image: url('logoEco.jpg'); /* Cambia por tu imagen */
-        background-size: cover; /* Ajusta la imagen para cubrir el área */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
- }
