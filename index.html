@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="Prueba.css">
 </head>
 <body class="pagina1">
+    <div class="resolucion">
+        <div class="desktop">
+            <h1>Esto es un ordenador</h1>
+        </div>
+        <div class="tablet">
+            <h1>Esto es una tablet</h1>
+        </div>
+        <div class="movil">
+            <h1>Esto es un telefono</h1>
+        </div>
+    </div>
     <script>
      var nombre;
 while (!nombre || nombre.length < 3 || !isNaN(nombre)) { /*IsNaN es una funcion si es numero */
@@ -20,7 +31,7 @@ document.getElementById("btnEjemplo").addEventListener("click", function() {
     this.value = "¡Redirigiendo!"; 
 });
     </script>
-    <img class="ImagenLogo" src="logoEco.jpg" alt="Logo Ecología">
+    <div class="Imagen"></div>
     <input type="button" value="Ingresar" onclick="window.location.href='Prueba.html';" id="btnIngresar"> 
 </body>
 </html>
