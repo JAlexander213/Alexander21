@@ -13,29 +13,19 @@
 
 .pagina2 {
     background: linear-gradient(to right, #000000, #8c12f0, rgb(248, 134, 40));
-    height: 100vh;
-    margin: 0;
 }
 
 .pagina3 {
     background: linear-gradient(to right, #000000, rgb(173, 6, 214), #f712e4); 
-    height: 100vh;
-    margin: 0;
 }
 .pagEco{
     background: linear-gradient(to right, #000000, rgb(48, 60, 226), #416bf5); 
-    height: 100vh;
-    margin: 0;
 }
 .pagSalud{
     background: linear-gradient(to right, #000000, rgb(230, 39, 39), #f17d30); 
-    height: 100vh;
-    margin: 0;
 }
 .pagEI{
     background: linear-gradient(to right, #000000, rgb(19, 252, 89), #42e686); 
-    height: 100vh;
-    margin: 0;
 }
 
 .ImagenLogo {
