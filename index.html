@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Prueba.css">
+    <title>Login y Registro - EcoConciencia</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body class="pagina1">
-    <div class="resolucion">
-        <div class="desktop">
-            <h1>Esto es un ordenador</h1>
-        </div>
-        <div class="tablet">
-            <h1>Esto es una tablet</h1>
-        </div>
-        <div class="movil">
-            <h1>Esto es un telefono</h1>
+<body>
+    <div class="contenedor">
+        <div class="tarjeta" id="tarjeta">
+            <div class="frente">
+                <h2>Iniciar Sesión</h2>
+                <form action="procesar.php" method="POST">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit" name="login" onclick="window.location.href='ProgramasJ/Parcial1/index.html';" >Entrar</button>
+                    
+                </form>
+                <p class="cambiar-form" onclick="voltearTarjeta()">¿No tienes cuenta? Regístrate</p>
+            </div>
+            <div class="atras">
+                <h2>Registrarse</h2>
+                <form action="procesar.php" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="text" name="usuario" placeholder="Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit" name="register">Registrarse</button>
+                </form>
+                <p class="cambiar-form" onclick="voltearTarjeta()">¿Ya tienes cuenta? Inicia sesión</p>
+            </div>
         </div>
     </div>
+
     <script>
-     var nombre;
-while (!nombre || nombre.length < 3 || !isNaN(nombre)) { /*IsNaN es una funcion si es numero */
-    nombre = prompt("Ingresa tu nombre:");
-    if (!nombre || nombre.length < 3 || !isNaN(nombre)) { /*Length Cadena que devuelve cantidad de caracteres */
-        alert("Por favor, ingresa un nombre válido (al menos 3 caracteres)");
-    }
-}
-alert("Bienvenido " + nombre);
-document.getElementById("btnEjemplo").addEventListener("click", function() {
-    this.value = "¡Redirigiendo!"; 
-});
+        function voltearTarjeta() {
+            document.getElementById('tarjeta').classList.toggle('volteado');
+        }
     </script>
-    <div class="Imagen"></div>
-    <input type="button" value="Ingresar" onclick="window.location.href='Prueba.html';" id="btnIngresar"> 
 </body>
 </html>
